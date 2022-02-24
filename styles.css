@@ -4,14 +4,27 @@
     font-family: 'Fira Sans', sans-serif;
     box-sizing: border-box;
 }
-
+    /* For mobile: */
 .hero {
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(0deg, rgba(34,38,41,1) 0%, rgba(34,38,41,0.6278712168461135) 34%, rgba(0,212,255,0) 100%), url('/img/herobg.PNG');
+    background-image: linear-gradient(0deg, rgba(34, 38, 41, 1) 0%, rgba(34, 38, 41, 0.6278712168461135) 34%, rgba(0, 212, 255, 0) 100%), url('/img/hero-S.png');
     background-size: cover;
     background-position: center;
     background-color: #222629;
+}
+@media only screen and (min-width: 800px) {
+    /* For desktop: */
+.hero {
+    background-image: linear-gradient(0deg, rgba(34, 38, 41, 1) 0%, rgba(34, 38, 41, 0.6278712168461135) 34%, rgba(0, 212, 255, 0) 100%), url('/img/hero-M.png');
+}
+}
+
+@media only screen and (min-width: 1072px) {
+    /* For desktop: */
+.hero {
+    background-image: linear-gradient(0deg, rgba(34, 38, 41, 1) 0%, rgba(34, 38, 41, 0.6278712168461135) 34%, rgba(0, 212, 255, 0) 100%), url('/img/hero-L.png');
+}
 }
 
 span {
