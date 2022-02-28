@@ -1,8 +1,8 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Fira Sans', sans-serif;
     box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -12,51 +12,52 @@ body {
 
 h1 {
     color: white;
-    margin: 10px 0px 10px;
     font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 h3 {
     color: white;
-    font-weight: 400;
     font-size: 1.2em;
+    font-weight: 400;
     margin-bottom: 50px;
 }
 
 h4 {
     color: white;
+    font-size: 23px;
     font-weight: 400;
     letter-spacing: 2px;
-    font-size: 23px;
 }
 
 span {
-    color:#86c232;
+    color: #86c232;
 }
 
 /* NAVIGATION */
 
 nav {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 45px;
     padding-left: 8%;
     padding-right: 8%;
+    padding-top: 45px;
 }
 
 ul {
     display: flex;
-    width: 550px;
-    justify-content: space-around;
-    list-style-type: none;
     font-size: 16px;
     font-weight: 900;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 550px;
 }
 
 li a {
-    letter-spacing: 1px;
     color: rgb(238, 239, 240);
+    letter-spacing: 1px;
     text-decoration: none;
     text-transform: capitalize;
 }
@@ -74,13 +75,12 @@ nav .menuicon {
 
 /* Heroimage bg shit For mobile: */
 .hero {
-    height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(0deg, rgba(34, 38, 41, 1) 0%, rgba(34, 38, 41, 0.6278712168461135) 34%, rgba(0, 212, 255, 0) 100%), url('/img/hero-S.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: absolute;
     background-color: #222629;
+    background-image: linear-gradient(0deg, rgba(34, 38, 41, 1) 0%, rgba(34, 38, 41, 0.6278712168461135) 34%, rgba(0, 212, 255, 0) 100%), url('/img/hero-S.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
 }
 
 @media only screen and (min-width: 800px) {
@@ -104,19 +104,19 @@ nav .menuicon {
 }
 
 .hero-content {
+    left: 8%;
     position: absolute;
     top: 50%;
-    left: 8%;
     transform: translateY(-50%);
 }
 
 .content-section {
-    height: 100vh;
-    width: 100vw;
+    background-color: #222629;
     padding-left: 8%;
     padding-right: 8%;
-    background-color: #222629;
     padding-top: 3%;
+    position: relative;
+    width: 100%;
 }
 
 .content-section p {
@@ -126,39 +126,39 @@ nav .menuicon {
 /* Timeline spesific */
 
 .timeline {
-    position: relative;
-    max-width: 1200px;
     margin: 80px auto;
+    max-width: 1200px;
+    position: relative;
 }
 
 .timeline::after {
-    content: '';
-    position: absolute;
-    width: 5px;
     background-color: #404549;
-    top: 0;
     bottom: 0;
+    content: '';
     left: 50%;
     margin-left: -3px;
+    position: absolute;
+    top: 0;
+    width: 5px;
 }
 
 .container {
+    background-color: inherit;
     padding: 10px 40px;
     position: relative;
-    background-color: inherit;
     width: 50%;
 }
 
 .container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
     background-color: #86c232;
-    border: 4px solid #404549;
-    top: 15px;
     border-radius: 50%;
+    border: 4px solid #404549;
+    content: '';
+    height: 25px;
+    position: absolute;
+    right: -17px;
+    top: 15px;
+    width: 25px;
     z-index: 1;
 }
 
@@ -174,10 +174,10 @@ nav .menuicon {
     content: " ";
     height: 0;
     position: absolute;
+    right: 30px;
     top: 22px;
     width: 0;
     z-index: 1;
-    right: 30px;
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
@@ -186,13 +186,13 @@ nav .menuicon {
 .right::before {
     content: " ";
     height: 0;
+    left: 30px;
     position: absolute;
     top: 22px;
     width: 0;
     z-index: 1;
-    left: 30px;
     border: medium solid white;
-    border-width: 10px 10px 10px 0px;
+    border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
 }
 
@@ -201,10 +201,10 @@ nav .menuicon {
 }
 
 .content {
-    padding: 20px 30px;
     background-color: #404549;
-    position: relative;
     border-radius: 6px;
+    padding: 20px 30px;
+    position: relative;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -216,9 +216,9 @@ nav .menuicon {
     }
 
     .container {
-        width: 100%;
         padding-left: 70px;
         padding-right: 25px;
+        width: 100%;
     }
 
     .container::before {
@@ -234,7 +234,7 @@ nav .menuicon {
     }
 
     .right {
-        left: 0%;
+        left: 0;
     }
 }
 
